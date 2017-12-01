@@ -5,7 +5,7 @@
 
 using namespace std;
 
-bool read(string & s1, char & op, string & s2) {
+bool read(string & s1, char & op, string & s2){
 	bool f = false;
 	string line;
 	getline(cin, line);
@@ -43,6 +43,7 @@ bool input(float ** & matrix, unsigned int & rows, unsigned int & columns, strin
 		}
 	}
 	fin.close();
+	return true;
 }
 
 bool add(float **lhs_elements, unsigned int lhs_rows, unsigned int lhs_columns, float **rhs_elements, unsigned int rhs_rows, unsigned int rhs_columns, float ** & result_elements, unsigned int & result_rows, unsigned int & result_columns){
@@ -174,7 +175,7 @@ void destroy(float ** & matrix, unsigned int & rows){
 int main(){
     string s1, s2;
     char op;
-    if(!(read(s1, op, s2)){
+    if(!(read(s1, op, s2))){
         cout<<"An error has occured while reading input data"<<endl;
         return 10;
     }
